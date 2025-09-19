@@ -7,6 +7,7 @@ public abstract class Employee implements Comparable<Employee> {
    public Employee(String name, LocalDate hireDate) {
       this.name = name;
       this.hireDate = hireDate;
+      return;
    }
 
    public String getName() {
