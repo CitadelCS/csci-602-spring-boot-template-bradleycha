@@ -25,3 +25,7 @@
 /nbdist/
 /.nb-gradle/
 /build/
+
+# Secrets
+src/main/resources/application*.yaml
+src/test/resources/application*.yaml
