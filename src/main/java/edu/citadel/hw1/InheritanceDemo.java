@@ -50,7 +50,7 @@ public class InheritanceDemo {
          Employee employee = employees.get(i);
 
          System.out.printf(
-            "%s: $%#.2f\n",
+            "%s: $%,#.2f\n",
             employee.getName(),
             employee.getMonthlyPay()
          );
