@@ -28,6 +28,14 @@ public class InheritanceDemo {
          105000.0
       ));
 
+      System.out.println("List of Employees (before sorting)");
+      for (int i = 0; i < employees.size(); ++i) {
+         Employee employee = employees.get(i);
+
+         System.out.println(employee.toString());
+      }
+      System.out.print('\n');
+
       return;
    }
 };
