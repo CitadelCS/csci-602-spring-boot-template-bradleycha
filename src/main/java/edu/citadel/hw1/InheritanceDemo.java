@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class InheritanceDemo {
    private static void printEmployees(ArrayList<Employee> employees, String title) {
-      System.out.println(title);
+      System.out.print(title);
 
       for (int i = 0; i < employees.size(); ++i) {
          Employee employee = employees.get(i);
@@ -41,9 +41,20 @@ public class InheritanceDemo {
          105000.0
       ));
 
-      printEmployees(employees, "List of Employees (before sorting)");
+      printEmployees(employees, "List of Employees (before sorting)\n");
       Collections.sort(employees);
-      printEmployees(employees, "\nList of Employees (after sorting)");
+      printEmployees(employees, "\nList of Employees (after sorting)\n");
+
+      System.out.print("\nMonthly Pay\n");
+      for (int i = 0; i < employees.size(); ++i) {
+         Employee employee = employees.get(i);
+
+         System.out.printf(
+            "%s: $%#.2f\n",
+            employee.getName(),
+            employee.getMonthlyPay()
+         );
+      }
 
       return;
    }
