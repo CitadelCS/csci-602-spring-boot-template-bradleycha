@@ -1,7 +1,20 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.time.LocalDate;
 
 public class InheritanceDemo {
+   private static void printEmployees(ArrayList<Employee> employees, String title) {
+      System.out.println(title);
+
+      for (int i = 0; i < employees.size(); ++i) {
+         Employee employee = employees.get(i);
+
+         System.out.println(employee.toString());
+      }
+
+      return;
+   }
+
    public static void main(String [] args) {
       ArrayList<Employee> employees = new ArrayList<Employee>();
 
@@ -28,13 +41,9 @@ public class InheritanceDemo {
          105000.0
       ));
 
-      System.out.println("List of Employees (before sorting)");
-      for (int i = 0; i < employees.size(); ++i) {
-         Employee employee = employees.get(i);
-
-         System.out.println(employee.toString());
-      }
-      System.out.print('\n');
+      printEmployees(employees, "List of Employees (before sorting)");
+      Collections.sort(employees);
+      printEmployees(employees, "\nList of Employees (after sorting)");
 
       return;
    }
