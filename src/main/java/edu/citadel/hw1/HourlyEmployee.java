@@ -27,7 +27,7 @@ public class HourlyEmployee extends Employee {
    @Override
    public String toString() {
       return String.format(
-         "HourlyEmployee[name=%s, hireDate=%s, wageRate=%.1#f, hoursWorked=%.1#f]",
+         "HourlyEmployee[name=%s, hireDate=%s, wageRate=%#.1f, hoursWorked=%#.1f]",
          this.getName(),
          this.getHireDate().toString(),
          this.getWageRate(),
