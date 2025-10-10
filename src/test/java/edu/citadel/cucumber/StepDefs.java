@@ -6,9 +6,9 @@ import io.cucumber.java.en.And;
 import static org.junit.Assert.assertEquals;
 
 public class StepDefs extends SpringIntegrationTest {
-   @When("^the client calls /version$")
-   public void theClientCallsVersion() throws Throwable {
-      executeGet("version");
+   @When("^the client calls /(.+)$")
+   public void theClientCallsVersion(String url) throws Throwable {
+      executeGet(url);
    }
 
    @Then("^the client receives status code of (\\d+)$")
