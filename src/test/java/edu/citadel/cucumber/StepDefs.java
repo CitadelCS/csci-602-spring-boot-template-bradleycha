@@ -17,10 +17,10 @@ public class StepDefs extends SpringIntegrationTest {
       assertEquals(statusCodeReceived, statusCodeExpected);
    }
 
-   @And("^the client receives server version (.+)$")
-   public void theClientReceivesServerVersion(String versionExpected) throws Throwable {
-      String versionReceived = this.testRestResponse.getBody();
-      assertEquals(versionReceived, versionExpected);
+   @And("^the client receives server response (.+)$")
+   public void theClientReceivesServerResponse(String responseExpected) throws Throwable {
+      String responseReceived = this.testRestResponse.getBody();
+      assertEquals(responseReceived, responseExpected);
    }
 }
 
